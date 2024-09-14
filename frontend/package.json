@@ -1,0 +1,24 @@
+{
+  "name": "proxy-vpn-blockchain-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "d3": "^7.8.4",
+    "globe.gl": "^2.32.5",
+    "next": "^12.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web3": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "@types/react": "^17.0.30",
+    "typescript": "^4.4.4"
+  }
+}
