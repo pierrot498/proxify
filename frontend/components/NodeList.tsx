@@ -1,4 +1,11 @@
-export default function NodeList({ nodes }) {
+interface Node {
+  id: string;
+  ip: string;
+  bandwidth: number;
+  successRate: number;
+}
+
+export default function NodeList({ nodes }: { nodes: Node[] }) {
   return (
     <div>
       <h2>Provider Nodes</h2>

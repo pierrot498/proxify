@@ -1,4 +1,4 @@
-export default function PrivateKeyInput({ value, onChange }) {
+export default function PrivateKeyInput({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   return (
     <div>
       <label htmlFor="privateKey">Private Key:</label>

@@ -44,9 +44,18 @@ export default function GlobalMap() {
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .backgroundColor('#000000')
       .pointsData(mockNodes)
-      .pointColor(d => d.type === 'client' ? '#39FF14' : d.type === 'validator' ? '#FF3939' : '#3939FF')
-      .pointAltitude(d => d.type === 'validator' ? 0.1 : 0.05)
-      .pointRadius(d => d.type === 'validator' ? 0.05 : 0.03)
+      .pointColor((d) => {
+        const node = d as Node;
+        return node.type === 'client' ? '#39FF14' : node.type === 'validator' ? '#FF3939' : '#3939FF';
+      })
+      .pointAltitude((d) => {
+        const node = d as Node;
+        return node.type === 'validator' ? 0.1 : 0.05;
+      })
+      .pointRadius((d) => {
+        const node = d as Node;
+        return node.type === 'validator' ? 0.05 : 0.03;
+      })
       .pointsMerge(true)
       .pointsTransitionDuration(1000)
       .onPointClick((node) => setSelectedNode(node as Node));
